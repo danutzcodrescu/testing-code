@@ -1,6 +1,6 @@
 # Testing case
 
-Dependencies can be installed by creating a new terminal and running `yarn add dep-name`.
+Dependencies can be installed by creating a new terminal and running `yarn add dep-name`. Any other package manager should work as well (eg `npm` or `pnpm`).
 
 ## Requirement 1: retrieve movies from SWAPI and display them as a list of cards
 
@@ -20,7 +20,7 @@ The shape of the data is available is src/types/movies
         previous: null;
         results:  Film[];
     }
-    
+
     Film {
         title:         string;
         episode_id:    number;
@@ -41,21 +41,13 @@ The shape of the data is available is src/types/movies
 
 Example of the card ![Movie Card](./public/card.png "Film Card")
 
-
-
-
-## Requirement 2: responsive design 
+## Requirement 2: responsive design
 
 Display the list of cards as 3 columns if the screen is bigger than 1200px and as 1 column if the screen is smaller.
-
-
-
 
 ## Requirement 3: filtering
 
 Create a text input above the list of movies. Based on the query provided in the input, the list should be filtered. The list should be filtered on the title propery, and the filter should be case insensitive.
-
-
 
 ## Requirement 4: routing
 

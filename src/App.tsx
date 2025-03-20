@@ -1,16 +1,19 @@
-import { useState } from "react";
+import { ThemeProvider } from "@mui/material";
 import { QueryClientProvider } from "@tanstack/react-query";
-import { ThemeProvider, Typography } from "@mui/material";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { queryClient } from "./client";
+import { TestComponent } from "./TestComponent";
 import { theme } from "./theme";
-
-import { RouterProvider } from "@tanstack/router";
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={theme}>
-        <Typography>Placeholder text</Typography>
+        <BrowserRouter>
+          <Routes>
+            <Route index element={<TestComponent />} />
+          </Routes>
+        </BrowserRouter>
       </ThemeProvider>
     </QueryClientProvider>
   );
