@@ -4,7 +4,7 @@ Dependencies can be installed by creating a new terminal and running `yarn add d
 
 ## Requirement 1: retrieve movies from SWAPI and display them as a list of cards
 
-Retrieve data from https://swapi.dev/api/films and display them as a list of cards. The card should contain the title as h3 bolded text, a row with 3 columns containing information about release date, director and producers. Last paragraph should contain the opening crawl.
+Retrieve data from https://swapi.tech/api/films and display them as a list of cards. The card should contain the title as h3 bolded text, a row with 3 columns containing information about release date, director and producers. Last paragraph should contain the opening crawl.
 
 While loading the data a circular spinner should be displayed in the middle of the screen (centered both horizontal and vertical).
 
@@ -15,27 +15,33 @@ The shape of the data is available is src/types/movies
 
 ```
     FilmsResponse {
-        count:    number;
-        next:     null;
+        count: number;
+        next: null;
         previous: null;
-        results:  Film[];
+        result: Film[];
     }
 
     Film {
-        title:         string;
-        episode_id:    number;
+        description: string;
+        properties: Properties;
+        uid: string;
+    }
+
+    interface Properties {
+        title: string;
+        episode_id: number;
         opening_crawl: string;
-        director:      string;
-        producer:      string;
-        release_date:  string;
-        characters:    string[];
-        planets:       string[];
-        starships:     string[];
-        vehicles:      string[];
-        species:       string[];
-        created:       Date;
-        edited:        Date;
-        url:           string;
+        director: string;
+        producer: string;
+        release_date: string;
+        characters: string[];
+        planets: string[];
+        starships: string[];
+        vehicles: string[];
+        species: string[];
+        created: Date;
+        edited: Date;
+        url: string;
     }
 ```
 
@@ -51,4 +57,4 @@ Create a text input above the list of movies. Based on the query provided in the
 
 ## Requirement 4: routing
 
-Add a `More details` link under the opening crawl paragraph that sends the user to `/films/id` and on that page it retrieves the data from https://swapi.dev/api/films/id and displays the title of the movie. While loading the data a circular spinner should be displayed in the middle of the screen (centered both horizontal and vertical).
+Add a `More details` link under the opening crawl paragraph that sends the user to `/films/id` and on that page it retrieves the data from https://swapi.tech/api/films/id and displays the title of the movie. While loading the data a circular spinner should be displayed in the middle of the screen (centered both horizontal and vertical).
