@@ -1,14 +1,8 @@
 export interface FilmsResponse {
-  message: string;
-  apiVersion: string;
-  timestamp: string;
+  count: number;
+  next: null;
+  previous: null;
   result: Film[];
-}
-
-export interface Film {
-  description: string;
-  properties: Properties;
-  uid: string;
 }
 
 export interface Properties {
@@ -26,4 +20,10 @@ export interface Properties {
   created: Date;
   edited: Date;
   url: string;
+}
+
+export interface Film {
+  description: string;
+  properties: Properties;
+  uid: string;
 }
