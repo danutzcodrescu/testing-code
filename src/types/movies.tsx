@@ -1,8 +1,8 @@
 export interface FilmsResponse {
-  count: number;
-  next: null;
-  previous: null;
-  results: Film[];
+  message: string;
+  apiVersion: string;
+  timestamp: string;
+  result: Film[];
 }
 
 export interface Film {
